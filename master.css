@@ -22,40 +22,72 @@ body {
     /* counter-reset: section; */
 }
 
-.grid1 {
-    counter-reset: num;
-    background-color: #ddd;
-    padding: 20px;
-    width: 800px;
-    height: 400px;
-    margin: 20px auto;
+.layout {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px auto;
-    gap: 10px;
-    position: relative;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+        "hed hed hed hed hed hed"
+        "sec sec sec sec asd asd"
+        "ftr ftr ftr ftr ftr ftr";
 }
 
-.grid1 div {
+header {
+    grid-area: hed;
+    background-color: #56AAF5;
+}
+
+header::before {
+    content: "Header";
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+section {
+    grid-area: sec;
+    background-color: #E8542B;
+}
+
+section::before {
+    content: "Section";
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+
+aside {
+    grid-area: asd;
     background-color: #607D8B;
 }
 
-.grid1 div::before {
-    /* content: "Element "; */
-    counter-increment: num;
-    content: "Element " counter(num);
-    position: absolute;
+aside::before {
+    content: "Aside";
+    display: block;
     text-align: center;
+    line-height: 50px;
     color: #fff;
-    width: 100%;
-    height: 20px;
     font-size: 20px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
 }
 
-.grid1 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+    grid-area: ftr;
+    background-color: #489689;
+}
+
+footer::before {
+    content: "Footer";
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
 }
