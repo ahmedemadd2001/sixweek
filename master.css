@@ -1,44 +1,7 @@
-/*
-  Grid
-  Parent
-  - display: grid | inline-grid
-  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
-  - gap: [Row Gap] [Column Gap]
-  - justify-content
-  - align-content
-  - grid-template-areas
-  Child
-  - grid-column: [Grid-Column-Start] [Grid-Column-End]
-  - grid-row: [Grid-Row-Start] [Grid-Row-End]
-  - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
-*/
+ * {
+     box-sizing: border-box;
+ }
 
-/*
-  matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
-
-*/
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    /* counter-reset: section; */
-}
-
-div {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    transform: translate(-50%, -50%);
-    animation-name: change-color;
-    animation-duration: 2s;
-}
+ body {
+     /* counter-reset: section; */
+ }
